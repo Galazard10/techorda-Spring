@@ -3,6 +3,8 @@ package kz.bitlab.techboot.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Data
 @Entity
 @AllArgsConstructor
@@ -27,4 +29,7 @@ public class Item {
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Country country;
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    private List<Category> categories;
 }
