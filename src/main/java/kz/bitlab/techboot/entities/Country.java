@@ -5,26 +5,21 @@ import lombok.*;
 
 @Data
 @Entity
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
-@Table(name = "t_items")
-public class Item {
+@Table(name = "t_countries")
+public class Country {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
     @Column(name = "name")
     private String name;
 
-    @Column(name = "description")
-    private String description;
-
-    @Column(name = "price")
-    private Double price;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Country country;
+    @Column(name = "code", length = 3)
+    private String code;
 }

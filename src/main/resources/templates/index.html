@@ -16,6 +16,7 @@
                     <h5 class="card-title text-primary" th:text="${i.getName()}"></h5>
                     <p class="card-text" th:text="${i.getDescription()}"></p>
                     <h6 class="card-text text-success" th:text="${i.getPrice()}"></h6>
+                    <h6 class="card-text text-secondary" th:text="${i.getCountry().getName()}"></h6>
                     <a th:href="@{'/details/' + ${i.getId()}}" class="btn btn-success">Details</a>
                 </div>
             </div>

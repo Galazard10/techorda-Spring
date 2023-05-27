@@ -16,6 +16,9 @@
         <input type="text" name="description" class="form-control" placeholder="Insert item description">
         <label>ITEM PRICE</label>
         <input type="number" name="price" class="form-control" placeholder="Insert item price">
+        <select class="form-control" name="country_id">
+            <option th:each="cnt: ${countries}" th:text="${cnt.getName()}" th:value="${cnt.getId()}">
+        </select>
         <button type="submit" class="btn btn-success">Add Item</button>
     </form>
 </div>
